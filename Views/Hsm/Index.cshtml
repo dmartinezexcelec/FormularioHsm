@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Hsm.Models.HsmViewModel>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Entidades</title>
+</head>
+<body>
+    <h1>Datos de la tabla Hsm</h1>
+
+    <!-- Tabla de datos -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th> <!-- Encabezado para el ID -->
+                <th>Nombre</th> <!-- Encabezado para el Nombre -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <!-- Mostrar el ID de cada elemento -->
+                    <td>@item.Id</td>
+
+                    <!-- Mostrar el Nombre de cada elemento -->
+                    <td>@item.Nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
